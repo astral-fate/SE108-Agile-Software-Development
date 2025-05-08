@@ -1,1 +1,749 @@
+    <!-- Main Tab Buttons -->
+    <div class="main-tabs">
+        <button class="tab-button active" data-tab="glossary">Glossary</button>
+        <button class="tab-button" data-tab="concepts">Key Concepts</button>
+         <button class="tab-button" data-tab="essay">Essay Questions</button> <!-- Added Essay Tab -->
+        <button class="tab-button" data-tab="fill">Fill in the Blank</button>
+        <button class="tab-button" data-tab="tf">True/False</button>
+        <button class="tab-button" data-tab="mc">Multiple Choice</button>
+    </div>
 
+    <!-- Glossary Section (Accordion) -->
+    <section id="glossary" class="main-content active">
+        <h2>Glossary of Terms</h2>
+        <div class="accordion-container"> <!-- Used accordion-container -->
+            <!-- Add terms based on SE206 Unit 1 PDF content -->
+             <div class="accordion-item">
+                <button class="accordion-header">Agile Development</button>
+                <div class="accordion-panel">
+                    <p>A group of software development methodologies based on iterative and incremental development, where requirements and solutions evolve through collaboration between self-organizing, cross-functional teams. (Based on PDF slides 10, 6)</p>
+                </div>
+            </div>
+             <div class="accordion-item">
+                <button class="accordion-header">Agile Manifesto</button>
+                <div class="accordion-panel">
+                    <p>A formal proclamation of four key values to guide an iterative and people-centric approach to software development. Values include: Individuals and interactions over processes and tools; Working software over comprehensive documentation; Customer collaboration over contract negotiation; Responding to change over following a plan. (Based on PDF slide 9)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Incremental Development</button>
+                <div class="accordion-panel">
+                    <p>A development approach where the software is built and delivered in pieces (increments). Each increment adds more functionality, allowing early feedback and use. (Based on PDF slides 7, 10)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Iterative Development</button>
+                <div class="accordion-panel">
+                    <p>A development approach that cycles through development phases (like requirements, design, implementation, testing) multiple times in short durations (iterations), refining the product with each cycle. (Based on PDF slides 7, 10)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Scrum</button>
+                <div class="accordion-panel">
+                    <p>An Agile framework for managing complex projects. It uses iterative cycles called Sprints and emphasizes collaboration, self-organization, and frequent delivery. It is suitable for small teams (less than 10) and distributed teams. (Based on PDF slides 17, 36, 37)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Self-Organizing Team</button>
+                <div class="accordion-panel">
+                    <p>A team structure, common in Agile, where the team members collectively decide how best to accomplish their work to meet goals, rather than being directed externally. The best architectures and designs emerge from such teams. (Based on PDF slides 10, 13)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Software Development Life Cycle (SDLC)</button>
+                <div class="accordion-panel">
+                    <p>A framework defining tasks performed at each step in the software development process. (Based on PDF slide 4)</p>
+                </div>
+            </div>
+             <div class="accordion-item">
+                <button class="accordion-header">Sprint</button>
+                <div class="accordion-panel">
+                    <p>(In Scrum) A fixed-length iteration (typically 1-6 weeks) during which a potentially shippable product increment is created. It includes daily meetings. (Based on PDF slides 14, 37, 39)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Traditional Methodologies</button>
+                <div class="accordion-panel">
+                    <p>Software development approaches, like the Waterfall model, characterized by sequential phases, extensive upfront planning, and resistance to change once a phase is complete. (Based on PDF slides 5, 8)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Waterfall Model</button>
+                <div class="accordion-panel">
+                    <p>A traditional, sequential software development model where progress flows steadily downwards (like a waterfall) through phases like Requirement Gathering, System Analysis, Coding, Testing, Implementation, and Maintenance. It has limited flexibility for changes. (Based on PDF slides 5, 7)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Working Software</button>
+                <div class="accordion-panel">
+                    <p>A core principle and value in Agile, emphasizing the delivery of functional software increments as the primary measure of progress, rather than focusing solely on documentation or phase completion. (Based on PDF slides 9, 12)</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Extreme Programming (XP)</button>
+                <div class="accordion-panel">
+                    <p>An Agile software development framework intended to improve software quality and responsiveness to changing customer requirements. It is best suited for new or incomplete projects where requirements are expected to change frequently and designed for small project teams (2-12 members). (Based on PDF slides 17, 18)</p>
+                </div>
+            </div>
+             <div class="accordion-item">
+                <button class="accordion-header">Product Backlog</button>
+                <div class="accordion-panel">
+                    <p>(In Scrum) A prioritized list of features, functions, requirements, enhancements, and fixes that constitute the changes to be made to the product in future releases. It is managed by the Product Owner. (Based on PDF slides 37, 38, 39)</p>
+                </div>
+            </div>
+             <div class="accordion-item">
+                <button class="accordion-header">Sprint Backlog</button>
+                <div class="accordion-panel">
+                    <p>(In Scrum) The set of Product Backlog items selected for the Sprint, plus a plan for delivering the product Increment and realizing the Sprint Goal. It is managed by the Development Team. (Based on PDF slides 37, 39)</p>
+                </div>
+            </div>
+
+
+        </div> <!-- End accordion-container -->
+    </section>
+
+    <!-- Key Concepts Section -->
+    <section id="concepts" class="main-content">
+        <h2>Key Concepts from Unit 1</h2>
+
+        <div class="concept-block">
+            <h3>Software Development Life Cycle (SDLC) and the Traditional Waterfall Model</h3>
+            <p>The Software Development Life Cycle (SDLC) is a framework describing the phases of software creation (PDF slide 4). The traditional <strong>Waterfall Model</strong> is a sequential SDLC where each phase must be completed before the next begins (PDF slide 5):</p>
+            <ol>
+                <li>Requirement Gathering</li>
+                <li>System Analysis</li>
+                <li>Coding</li>
+                <li>Testing</li>
+                <li>Implementation</li>
+                <li>Operations & Maintenance</li>
+            </ol>
+            <p>This linear flow makes it rigid and difficult to handle changes once a phase is finished (PDF slides 5, 7).</p>
+        </div>
+
+         <div class="concept-block">
+            <h3>What is Agile Development?</h3>
+            <p>Agile is an umbrella term for software development processes (PDF slide 6) based on (PDF slide 10):</p>
+            <ul>
+                <li><strong>Iterative:</strong> Development occurs in repeating cycles (iterations). (PDF slide 7)</li>
+                <li><strong>Incremental:</strong> Software is built and delivered in functional pieces (increments). (PDF slide 7)</li>
+                <li><strong>Self-organizing:</strong> Teams manage their own work to achieve goals, with best designs emerging from them. (PDF slide 10, 13)</li>
+            </ul>
+            <p>It focuses on flexibility, collaboration, and responding to change, unlike rigid traditional methods.</p>
+         </div>
+
+         <div class="concept-block">
+            <h3>Agile vs. Traditional Methods: Handling Constraints</h3>
+             <p>A fundamental difference lies in how they approach project constraints (Scope/Functionality, Time, Resources) (PDF slide 8):</p>
+             <ul>
+                 <li><strong>Traditional (Waterfall):</strong> Features/Functionality are usually <strong>Fixed</strong> upfront. <strong>Time</strong> and <strong>Resources</strong> are flexible (often leading to delays/overruns to deliver the fixed scope).</li>
+                 <li><strong>Agile:</strong> <strong>Time</strong> (iterations) and <strong>Resources</strong> (team size) are often <strong>Fixed</strong>. <strong>Functionality</strong> is flexible and evolves based on priority and feedback, delivering the most valuable features within the fixed constraints.</li>
+             </ul>
+             <p>Agile prioritizes delivering value within predictable timeboxes, while Traditional aims for a fixed scope, often sacrificing time/budget predictability.</p>
+         </div>
+
+        <div class="concept-block">
+            <h3>The Agile Manifesto: Core Values</h3>
+             <p>The Manifesto defines four core values, stating that while items on the right have value, those on the left are valued more (PDF slide 9):</p>
+             <ul>
+                 <li><strong>Individuals and interactions</strong> over processes and tools</li>
+                 <li><strong>Working software</strong> over comprehensive documentation (referred to as "Working Product" in PDF slide 9)</li>
+                 <li><strong>Customer collaboration</strong> over contract negotiation</li>
+                 <li><strong>Responding to change</strong> over following a plan</li>
+             </ul>
+             <p>This shifts focus to people, functional output, partnership, and adaptability.</p>
+        </div>
+
+         <div class="concept-block">
+            <h3>Key Agile Principles (Selected)</h3>
+            <p>Supporting the values are 12 principles. Important ones include (PDF slides 11-13):</p>
+            <ul>
+                <li>Highest priority is customer satisfaction through <strong>early and continuous delivery</strong> of valuable software.</li>
+                <li><strong>Welcome changing requirements</strong>, even late. Agile processes harness change for customer advantage.</li>
+                <li>Deliver <strong>working software frequently</strong> (weeks to months, shorter timescale preferred).</li>
+                <li>Business people and developers must <strong>work together daily</strong>.</li>
+                <li>Build projects around <strong>motivated individuals</strong>, providing support and trusting them.</li>
+                <li>Most efficient communication is <strong>face-to-face conversation</strong>.</li>
+                <li><strong>Working software</strong> is the primary measure of progress.</li>
+                <li>Promote <strong>sustainable development</strong> pace.</li>
+                <li><strong>Simplicity</strong>—maximizing work not done—is essential.</li>
+                <li>Best designs emerge from <strong>self-organizing teams</strong>.</li>
+             </ul>
+        </div>
+
+         <div class="concept-block">
+            <h3>Agile Characteristics</h3>
+            <p>Agile development processes typically exhibit the following characteristics (PDF slide 14):</p>
+            <ul>
+                <li><strong>Modularity:</strong> Process broken into smaller parts.</li>
+                <li><strong>Iterative:</strong> Development in short cycles for fast verification/correction.</li>
+                <li><strong>Time-bound:</strong> Iteration cycles are fixed (1-6 weeks).</li>
+                <li><strong>Adaptive:</strong> Flexible with possible emergent risks.</li>
+                <li><strong>People-oriented:</strong> Focus on individuals.</li>
+                <li><strong>Collaborative:</strong> Communicative working style.</li>
+             </ul>
+        </div>
+
+        <div class="concept-block">
+            <h3>Advantages of Agile</h3>
+             <p>Key benefits of adopting Agile (PDF slides 15-16):</p>
+             <ul>
+                 <li><strong>Early Realization of Value:</strong> Incremental nature means functional product parts are available early.</li>
+                 <li><strong>Visibility & Early Issue Identification:</strong> Frequent releases make product visible, helping identify issues sooner.</li>
+                 <li><strong>Adaptability to Change:</strong> Easier to accept and respond to changes.</li>
+                 <li><strong>Increased Customer Satisfaction:</strong> Through collaboration and frequent delivery.</li>
+                 <li><strong>Producing the Right Product:</strong> Iterative process and feedback ensure alignment with needs.</li>
+             </ul>
+        </div>
+
+        <div class="concept-block">
+            <h3>Overview of Agile Methodologies and Frameworks</h3>
+            <p>Agile is an umbrella term. Specific frameworks and methodologies implement Agile principles (PDF slide 17). Examples include:</p>
+            <ul>
+                <li>Extreme Programming (XP): Focuses on engineering practices. (PDF slide 18)</li>
+                <li>Scrum: A lightweight framework for managing complexity, using Sprints, roles (Product Owner, Scrum Master, Developer), and events (Daily Meeting). Suitable for small/distributed teams. (PDF slides 36-43)</li>
+                <li>Dynamic Systems Development Method (DSDM)</li>
+                <li>Feature Driven Development (FDD)</li>
+                <li>Crystal Method</li>
+                <li>Adaptive Software Development (ASD)</li>
+                <li>Unified Process (UP)</li>
+            </ul>
+         </div>
+
+    </section>
+
+    <!-- Essay Questions Section (Accordion) -->
+    <section id="essay" class="main-content">
+         <h2>Essay Questions</h2>
+        <div id="essay-questions-container" class="accordion-container">
+            <!-- Essay questions will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+
+    <!-- Quiz Sections -->
+    <div id="fill" class="main-content">
+        <h2>Fill in the Blank Questions</h2>
+        <div id="fill-questions"></div>
+    </div>
+
+    <div id="tf" class="main-content">
+        <h2>True/False Questions</h2>
+        <div id="tf-questions"></div>
+    </div>
+
+    <div id="mc" class="main-content">
+        <h2>Multiple Choice Questions</h2>
+        <div id="mc-questions"></div>
+    </div>
+
+</div> <!-- End Container -->
+
+<script>
+    // --- START OF QUIZ AND ESSAY DATA (SE206 UNIT 1 - Based on PDF) ---
+
+    const fillInTheBlank = [
+        { question: "The traditional software development model characterized by sequential phases is called the _______ model.", answer: "Waterfall" }, // Based on PDF slide 5
+        { question: "Agile development processes are described as Iterative, Incremental, and ______-organizing.", answer: "Self" }, // Based on PDF slide 10
+        { question: "The Agile Manifesto values 'Individuals and interactions' over '_______ and tools'.", answer: "processes" }, // Based on PDF slide 9 (lowercase matches slide)
+        { question: "In Agile, _______ software is the primary measure of progress.", answer: "Working" }, // Based on PDF slides 9, 12
+        { question: "Agile principle suggests that business people and developers must work together _______.", answer: "daily" }, // Based on PDF slide 11 (lowercase matches slide)
+        { question: "Compared to Traditional methods, Agile methods typically treat _______ as flexible while Time and Resources are fixed.", answer: "Functionality" }, // Based on PDF slide 8
+        { question: "The Agile principle of _______ involves maximizing the amount of work not done.", answer: "Simplicity" }, // Based on PDF slide 13
+        { question: "Agile iteration cycles typically range from one to _______ weeks.", answer: "six" }, // Based on PDF slide 14 (lowercase matches slide)
+        { question: "Extreme Programming (XP) is best suited for new or _______ projects where requirements are expected to change frequently.", answer: "incomplete" }, // Based on PDF slide 18
+        { question: "In Scrum, the _______ Owner is responsible for managing the Product Backlog.", answer: "Product" } // Based on PDF slide 41
+    ];
+
+    const trueOrFalse = [
+        { question: "The Waterfall model is flexible and handles changing requirements easily mid-project.", answer: false }, // Based on PDF slides 5, 7
+        { question: "Agile methodologies prioritize comprehensive documentation over working software.", answer: false }, // Based on PDF slide 9
+        { question: "Agile development is both iterative and incremental.", answer: true }, // Based on PDF slides 7, 10
+        { question: "The Agile Manifesto values following a plan over responding to change.", answer: false }, // Based on PDF slide 9
+        { question: "Self-organizing teams are a key characteristic of Agile development.", answer: true }, // Based on PDF slide 10, 13
+        { question: "Agile aims to deliver working software only at the very end of the project.", answer: false }, // Based on PDF slide 11, 15
+        { question: "Face-to-face conversation is considered the most efficient method of conveying information in an Agile team.", answer: true }, // Based on PDF slide 12
+        { question: "Traditional methods typically fix the scope (functionality) upfront.", answer: true }, // Based on PDF slide 8
+        { question: "Agile processes promote an unsustainable development pace to finish quickly.", answer: false }, // Based on PDF slide 13 (Promote sustainable pace)
+        { question: "Scrum is an example of a specific Agile methodology/framework.", answer: true }, // Based on PDF slide 17
+        { question: "XP is designed for large project teams, typically over 50 members.", answer: false }, // Based on PDF slide 18 (2-12 members)
+        { question: "In Scrum, the Daily Meeting is a long, detailed status report meeting for management.", answer: false } // Based on PDF slides 35, 37 (Short, team sync)
+    ];
+
+    const multipleChoice = [
+        { question: "Which of these is NOT one of the four core values of the Agile Manifesto?", options: ["Working software over comprehensive documentation", "Individuals and interactions over processes and tools", "Extensive planning over rapid iteration", "Customer collaboration over contract negotiation"], answer: "Extensive planning over rapid iteration" }, // Based on PDF slide 9
+        { question: "Which term best describes the Agile characteristic of delivering software in functional pieces?", options: ["Iterative", "Adaptive", "Incremental", "Time-bound"], answer: "Incremental" }, // Based on PDF slides 7, 10
+        { question: "What is the primary measure of progress in Agile development?", options: ["Completed documentation", "Hours spent", "Working software", "Approved phases"], answer: "Working software" }, // Based on PDF slides 9, 12
+        { question: "According to Agile principles, how often should business people and developers work together?", options: ["Weekly", "Monthly", "Daily", "Only at project milestones"], answer: "Daily" }, // Based on PDF slide 11
+        { question: "Which Agile principle encourages 'maximizing the amount of work not done'?", options: ["Sustainable Pace", "Simplicity", "Collaboration", "Feedback"], answer: "Simplicity" }, // Based on PDF slide 13
+        { question: "The Waterfall Model's primary limitation is its:", options: ["High cost", "Lack of documentation", "Resistance to change", "Small team size requirement"], answer: "Resistance to change" }, // Based on PDF slides 5, 7
+        { question: "Which of the following is listed as an advantage of Agile development?", options: ["Rigid planning", "Resistance to changing requirements", "Early realization of value", "Minimizing customer interaction"], answer: "Early realization of value" }, // Based on PDF slide 15
+        { question: "Agile teams that collectively decide how to accomplish their work are described as:", options: ["Manager-led", "Process-driven", "Self-organizing", "Customer-directed"], answer: "Self-organizing" }, // Based on PDF slides 10, 13
+        { question: "What is the typical duration of a Sprint in Scrum?", options: ["Several months", "1-4 weeks", "1-6 weeks", "One year"], answer: "1-6 weeks" }, // Based on PDF slide 14 (general iteration range), although Scrum Guide is typically 1-4. Using 1-6 based on slide 14's "Time-bound" characteristic. Let's stick to 1-6 weeks as per slide 14 for consistency with the provided PDF.
+        { question: "XP and Scrum are examples of:", options: ["Traditional SDLC phases", "Agile Methodologies/Frameworks", "Project Management Tools", "Documentation Standards"], answer: "Agile Methodologies/Frameworks" } // Based on PDF slide 17
+    ];
+
+    // --- START OF ESSAY QUESTION DATA (SE206 UNIT 1 - Based on PDF) ---
+     const essayQuestions = [
+        {
+            question: "Compare and contrast the Traditional Waterfall Model with Agile methodologies, focusing on how they handle project constraints (Scope, Time, Resources).",
+            answer: `
+                <p>The key difference between the Traditional Waterfall Model and Agile methodologies lies in their approach to managing project constraints: Scope (Functionality/Features), Time (Schedule), and Resources (Budget/Team Size).</p>
+                <ul>
+                    <li><strong>Traditional (Waterfall):</strong> In the Waterfall model, the <strong>Scope/Functionality</strong> is typically <strong>Fixed</strong> upfront, defined in detail before development begins. This fixed scope is resistant to change once phases are completed. Consequently, <strong>Time</strong> and <strong>Resources</strong> become the flexible variables, often extending to accommodate the original fixed scope if issues or changes arise. (Based on PDF slides 5, 8)</li>
+                    <li><strong>Agile:</strong> Agile methodologies often treat <strong>Time</strong> (via fixed-length iterations/sprints) and <strong>Resources</strong> (via stable teams) as relatively <strong>Fixed</strong> constraints. The <strong>Scope/Functionality</strong> then becomes the flexible variable. The team prioritizes and delivers the most valuable features within the fixed time and budget, allowing requirements to evolve based on feedback. (Based on PDF slide 8)</li>
+                </ul>
+                <p>In summary, Waterfall aims to deliver a predetermined product (fixed scope) even if time/cost increases, while Agile aims to deliver the most valuable product (flexible scope) within set time and resource limits.</p>
+            `
+        },
+         {
+            question: "Explain the four core values of the Agile Manifesto and their significance.",
+            answer: `
+                <p>The Agile Manifesto lists four core values, stating preference for the items on the left (Based on PDF slide 9):</p>
+                <ol>
+                    <li><strong>Individuals and interactions over processes and tools:</strong> Values human collaboration and communication over rigid adherence to processes or reliance on specific tools.</li>
+                    <li><strong>Working software over comprehensive documentation:</strong> Prioritizes delivering functional software as the primary measure of progress, reducing reliance on extensive upfront or detailed documentation. (Based on "Working Product" in PDF slide 9)</li>
+                    <li><strong>Customer collaboration over contract negotiation:</strong> Emphasizes continuous engagement and partnership with the customer to ensure the product meets evolving needs, rather than sticking strictly to a predefined contract.</li>
+                    <li><strong>Responding to change over following a plan:</strong> Recognizes that requirements will change and builds processes to welcome and adapt to change, providing a competitive advantage.</li>
+                </ol>
+                <p>These values represent a shift from traditional, plan-driven approaches by valuing people, tangible results, partnership, and adaptability higher.</p>
+            `
+        },
+         {
+            question: "Describe the concepts of 'Iterative' and 'Incremental' development as applied in Agile.",
+            answer: `
+                <p>Iterative and Incremental are core concepts in Agile (Based on PDF slide 10):</p>
+                <ul>
+                    <li><strong>Iterative Development:</strong> Involves repeating development cycles (iterations/sprints) through phases like planning, design, coding, and testing. Each cycle refines the product. (Based on PDF slides 7, 14)</li>
+                    <li><strong>Incremental Development:</strong> Involves building and delivering the software in functional pieces (increments). Each iteration adds a new, working piece of functionality to the system built previously. (Based on PDF slides 7, 15)</li>
+                </ul>
+                <p>Agile combines both: each iteration builds a new increment of working software, allowing for continuous refinement and early delivery of value.</p>
+            `
+        },
+         {
+            question: "Select and explain three key principles from the Agile Manifesto (beyond the core values) and how they guide a team.",
+            answer: `
+                <p>Three key Agile principles (Based on PDF slides 11-13):</p>
+                <ol>
+                    <li><strong>Highest priority is to satisfy the customer through early and continuous delivery of valuable software:</strong> Guides teams to prioritize delivering functional features frequently that provide actual business value to the customer. This ensures customer needs are met and value is realized early.</li>
+                    <li><strong>Working software is the primary measure of progress:</strong> Directs teams and stakeholders to evaluate progress based on demonstrable, functional software rather than documentation or phase completion. This provides a realistic view of project status and ensures focus on the final product.</li>
+                    <li><strong>The most efficient and effective method of conveying information to and within a development team is face-to-face conversation:</strong> Encourages direct communication among team members to foster better understanding, quicker problem-solving, and stronger collaboration, especially when co-located.</li>
+                </ol>
+            `
+        },
+        {
+            question: "List and briefly explain at least five key characteristics of Agile development processes.",
+            answer: `
+                <p>Key characteristics of Agile processes (Based on PDF slide 14):</p>
+                <ol>
+                    <li><strong>Modularity:</strong> Breaking the process into smaller, manageable parts.</li>
+                    <li><strong>Iterative:</strong> Repeating development cycles for refinement.</li>
+                    <li><strong>Time-bound:</strong> Fixed duration for iterations (1-6 weeks).</li>
+                    <li><strong>Adaptive:</strong> Ability to easily adjust to changes or risks.</li>
+                    <li><strong>People-oriented:</strong> Focus on individuals and their interactions.</li>
+                    <li><strong>Collaborative:</strong> Emphasis on communication and teamwork.</li>
+                </ol>
+                <p>(Six provided based on the PDF slide.)</p>
+            `
+        },
+         {
+            question: "Discuss two significant advantages of adopting Agile development compared to traditional methodologies.",
+            answer: `
+                <p>Two advantages of Agile (Based on PDF slides 15-16):</p>
+                <ol>
+                    <li><strong>Early Realization of Value:</strong> Due to incremental delivery, functional parts of the software are available to the customer sooner, providing business value earlier in the project lifecycle.</li>
+                    <li><strong>Increased Adaptability and Visibility:</strong> Frequent, incremental releases make the product visible early and continuously. This allows for early identification of issues and facilitates easier response to changing requirements throughout the project.</li>
+                </ol>
+            `
+        },
+         {
+            question: "Briefly describe the Waterfall Model's typical phases and its primary limitation.",
+            answer: `
+                <p>The Waterfall Model is a sequential SDLC (PDF slide 5) with typical phases:</p>
+                <ol>
+                    <li>Requirement Gathering</li>
+                    <li>System Analysis</li>
+                    <li>Coding</li>
+                    <li>Testing</li>
+                    <li>Implementation</li>
+                    <li>Operations & Maintenance</li>
+                </ol>
+                <p>Its primary limitation is its <strong>resistance to change</strong> (PDF slides 5, 7). Because phases must be completed sequentially, incorporating changes once a phase is finished is difficult and costly, making it unsuitable for projects with evolving requirements.</p>
+            `
+        },
+         {
+            question: "Explain the purpose and typical structure of a Daily Meeting in an Agile framework like Scrum.",
+            answer: `
+                <p>The Daily Meeting (or Daily Stand-up) in Scrum is a short, time-boxed event (typically 15 minutes) for the Development Team to synchronize activities and plan for the next 24 hours (Based on PDF slides 35, 37). The purpose is to identify impediments and ensure the team is on track towards the Sprint Goal. (Based on PDF slide 37)</p>
+                <p>A common structure involves team members briefly answering:</p>
+                <ol>
+                    <li>What did I do yesterday that helped the team meet the Sprint Goal?</li>
+                    <li>What will I do today to help the team meet the Sprint Goal?</li>
+                    <li>Are there any impediments blocking me or the team?</li>
+                </ol>
+                <p>It is a meeting *for* the team, not a status report *to* a manager.</p>
+            `
+        },
+         {
+            question: "Describe the primary responsibilities of the Product Owner role in a Scrum team.",
+            answer: `
+                <p>The Product Owner in Scrum is responsible for maximizing the value of the product resulting from the work of the Development Team (Based on PDF slide 41). Primary responsibilities include:</p>
+                <ul>
+                    <li>Managing the Product Backlog: Creating, clearly expressing, and maintaining items. (Based on PDF slide 41)</li>
+                    <li>Prioritizing Product Backlog Items: Ordering items based on value and dependencies. (Based on PDF slide 41)</li>
+                    <li>Ensuring Product Backlog transparency. (Implied by Product Backlog management)</li>
+                    <li>Being available to clarify requirements for the Development Team. (Based on PDF slide 41)</li>
+                    <li>Accepting or rejecting completed work (Increments) at the end of the Sprint. (Implied by reviewing system in PDF slide 41)</li>
+                    <li>Communicating with stakeholders. (Implied by reviewing system with other stakeholders in PDF slide 41)</li>
+                </ul>
+            `
+        },
+         {
+            question: "Explain the Agile principle 'Working software is the primary measure of progress' and why it's important.",
+            answer: `
+                <p>The principle "Working software is the primary measure of progress" states that the most reliable way to assess project status is by evaluating the functional, tested software that has been built, not reports or documentation (Based on PDF slide 12). (Referred to as "Working Product" in PDF slide 9).</p>
+                <p><strong>Importance:</strong></p>
+                <ul>
+                    <li>Provides tangible proof of implementation.</li>
+                    <li>Allows for early validation and feedback from users.</li>
+                    <li>Ensures focus on delivering actual value to the customer.</li>
+                    <li>Gives a more realistic view of project status compared to theoretical progress indicators.</li>
+                </ul>
+            `
+        },
+         {
+            question: "Describe two significant engineering practices associated with Extreme Programming (XP): Test-First Programming and Continuous Integration.",
+            answer: `
+                <p>XP emphasizes engineering practices (Based on PDF slide 18, also lists some practices on slides 32-34). Two significant ones are:</p>
+                <ol>
+                    <li><strong>Test-First Programming:</strong> Writing automated tests for functionality *before* writing the code. Helps ensure code is tested from the start and improves design. (Based on PDF slide 34)</li>
+                    <li><strong>Continuous Integration:</strong> Frequently integrating code changes from all team members (several times a day) and automatically building and testing the project. Helps detect and resolve integration issues and bugs early. (Based on PDF slide 34)</li>
+                </ol>
+            `
+        }
+    ];
+    // --- END OF QUIZ AND ESSAY DATA ---
+
+
+    // --- START OF SCRIPT LOGIC ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select main tabs and content sections
+        const mainTabButtons = document.querySelectorAll('.main-tabs .tab-button');
+        const mainTabContents = document.querySelectorAll('.main-content');
+
+        // Select content containers for dynamic loading
+        const essayContainer = document.getElementById('essay-questions-container');
+        const fillContainer = document.getElementById('fill-questions');
+        const tfContainer = document.getElementById('tf-questions');
+        const mcContainer = document.getElementById('mc-questions');
+
+
+        // --- Main Tab Switching Logic ---
+        mainTabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab'); // Get the ID of the target content
+
+                // Deactivate all main buttons and content
+                mainTabButtons.forEach(btn => btn.classList.remove('active'));
+                mainTabContents.forEach(content => content.classList.remove('active'));
+
+                // Activate the clicked button
+                button.classList.add('active');
+
+                // Activate the corresponding content section
+                const targetContent = document.getElementById(tabId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // --- Accordion Logic Setup ---
+        // Function to set up accordion listeners - called after content is loaded
+        function setupAccordions() {
+            const allAccordionHeaders = document.querySelectorAll('.accordion-container .accordion-header');
+
+            allAccordionHeaders.forEach(header => {
+                // Ensure the listener is added only once
+                if (!header.dataset.listenerAdded) {
+                    header.dataset.listenerAdded = 'true'; // Mark as added
+
+                     header.addEventListener('click', function() {
+                        const panel = this.nextElementSibling;
+                        const isActive = this.classList.contains('active');
+                        const parentContainer = this.closest('.accordion-container');
+
+                        // Close other accordions in the SAME container
+                        if (parentContainer) {
+                            parentContainer.querySelectorAll('.accordion-item').forEach(item => {
+                                 const otherHeader = item.querySelector('.accordion-header');
+                                 const otherPanel = item.querySelector('.accordion-panel');
+                                 // Check if it's a different item and its header is active
+                                 if (otherHeader && otherHeader !== this && otherHeader.classList.contains('active')) {
+                                    otherHeader.classList.remove('active');
+                                    otherPanel.style.maxHeight = null;
+                                    otherPanel.classList.remove('open');
+                                }
+                            });
+                        }
+
+                        // Toggle current accordion
+                        if (isActive) {
+                            this.classList.remove('active');
+                            panel.style.maxHeight = null;
+                             panel.classList.remove('open');
+                        } else {
+                            this.classList.add('active');
+                            // Set a max-height larger than content AND add 'open' class simultaneously
+                            panel.style.maxHeight = panel.scrollHeight + 40 + "px"; // Use scrollHeight + buffer
+                             panel.classList.add('open');
+                        }
+                     });
+                }
+            });
+        }
+
+
+        // --- Function to handle option selection within a question ---
+        function handleOptionSelection(button, questionDiv) {
+            // Deselect siblings within the same question
+            const siblings = questionDiv.querySelectorAll('.option-button.selected');
+            siblings.forEach(sib => sib.classList.remove('selected'));
+            // Select clicked button
+            button.classList.add('selected');
+             // Clear previous feedback when a new option is selected
+            const existingFeedback = questionDiv.querySelector('.feedback');
+            if (existingFeedback) {
+                existingFeedback.remove();
+            }
+        }
+
+        // --- Function to create and append feedback ---
+        function showFeedback(questionDiv, isCorrect, correctAnswer) {
+             // Remove existing feedback first
+            const existingFeedback = questionDiv.querySelector('.feedback');
+            if (existingFeedback) {
+                existingFeedback.remove();
+            }
+
+            const feedback = document.createElement('div');
+            feedback.className = 'feedback';
+            if (isCorrect) {
+                feedback.classList.add('correct');
+                feedback.textContent = 'Correct!';
+            } else {
+                feedback.classList.add('incorrect');
+                 // For T/F, explicitly show the boolean value as a string
+                 let displayAnswer = correctAnswer;
+                 if (typeof correctAnswer === 'boolean') {
+                     displayAnswer = correctAnswer ? 'True' : 'False';
+                 }
+                feedback.textContent = `Incorrect. Correct answer: ${displayAnswer}`;
+            }
+            // Append feedback after the check button
+            const checkButton = questionDiv.querySelector('.check-answer');
+             if (checkButton) {
+                // Insert after the check button if it exists
+                checkButton.parentNode.insertBefore(feedback, checkButton.nextSibling);
+            } else {
+                 // Otherwise, append to the end of the question div
+                 questionDiv.appendChild(feedback);
+            }
+        }
+
+        // --- Load Essay Questions ---
+         function loadEssayQuestions() {
+            essayContainer.innerHTML = ''; // Clear previous content
+             essayQuestions.forEach((q, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'accordion-item';
+
+                const headerButton = document.createElement('button');
+                headerButton.className = 'accordion-header';
+                headerButton.textContent = `${index + 1}. ${q.question}`; // Number the questions
+
+                const panelDiv = document.createElement('div');
+                panelDiv.className = 'accordion-panel';
+                panelDiv.innerHTML = q.answer; // Use innerHTML for rich content (p, ul, ol)
+
+                itemDiv.appendChild(headerButton);
+                itemDiv.appendChild(panelDiv);
+                essayContainer.appendChild(itemDiv);
+             });
+              setupAccordions(); // Setup listeners for newly added items
+         }
+
+
+        // --- Load Fill in the Blank Questions ---
+        function loadFillInTheBlankQuestions() {
+            fillContainer.innerHTML = ''; // Clear previous content
+            fillInTheBlank.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.id = `fill-q-${index}`;
+
+                const questionText = document.createElement('p');
+                // Find the blank spot indicated by _______ and replace it for display
+                questionText.innerHTML = `${index + 1}. ` + q.question.replace('_______', '<span style="color: #007bff; font-weight:bold;">_______</span>'); // Number the questions
+                questionDiv.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+
+                // Generate options based on the correct answer and some plausible distractors
+                // For simplicity, let's just use the provided answer for Fill-in-the-Blank options.
+                // In a real scenario, you'd add wrong options here.
+                const options = [q.answer]; // Start with the correct answer
+                // Add distractors if available in data, or generate simple ones if needed
+                // Assuming 'options' array might be provided in the data structure later
+                 // If data structure had options: const options = q.options;
+                 // For now, just use the answer as the only option for demonstration purposes based on this data format.
+                 // If we want multiple options for FITB, the data structure needs an options array.
+                 // Let's add some basic options for FITB like in the SE205 example structure,
+                 // even if the data above only provides the answer.
+                 // Let's update the data structure above for fillInTheBlank to include options like MC.
+
+                 // --- Corrected FITB Options Handling (Assuming data structure has 'options') ---
+                 const options = q.options || [q.answer]; // Use q.options if it exists, otherwise just the answer
+                 const shuffledOptions = [...options].sort(() => Math.random() - 0.5);
+                 // --- End Correction ---
+
+
+                shuffledOptions.forEach(option => {
+                    const optionButton = document.createElement('button');
+                    optionButton.className = 'option-button';
+                    optionButton.textContent = option;
+                    optionButton.addEventListener('click', () => handleOptionSelection(optionButton, questionDiv));
+                    optionsDiv.appendChild(optionButton);
+                });
+                questionDiv.appendChild(optionsDiv);
+
+                const checkButton = document.createElement('button');
+                checkButton.className = 'check-answer';
+                checkButton.textContent = 'Check Answer';
+                checkButton.addEventListener('click', () => {
+                    const selected = questionDiv.querySelector('.option-button.selected');
+                    if (selected) {
+                        // Trim whitespace from selected and answer for comparison
+                        const isCorrect = selected.textContent.trim().toLowerCase() === q.answer.trim().toLowerCase();
+                        showFeedback(questionDiv, isCorrect, q.answer);
+                    } else {
+                         showFeedback(questionDiv, false, q.answer);
+                    }
+                });
+                questionDiv.appendChild(checkButton);
+
+                fillContainer.appendChild(questionDiv);
+            });
+        }
+
+
+        // --- Load True/False Questions ---
+        function loadTrueFalseQuestions() {
+            tfContainer.innerHTML = ''; // Clear previous content
+            trueOrFalse.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.id = `tf-q-${index}`;
+
+                const questionText = document.createElement('p');
+                questionText.textContent = `${index + 1}. ` + q.question; // Number the questions
+                questionDiv.appendChild(questionText);
+
+                 const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+
+                // T/F options are always the same
+                const tfOptions = ['True', 'False'];
+
+                tfOptions.forEach(optionText => {
+                     const optionButton = document.createElement('button');
+                     optionButton.className = 'option-button';
+                     optionButton.textContent = optionText;
+                     optionButton.addEventListener('click', () => handleOptionSelection(optionButton, questionDiv));
+                     optionsDiv.appendChild(optionButton);
+                });
+
+                questionDiv.appendChild(optionsDiv);
+
+                const checkButton = document.createElement('button');
+                checkButton.className = 'check-answer';
+                checkButton.textContent = 'Check Answer';
+                checkButton.addEventListener('click', () => {
+                    const selected = questionDiv.querySelector('.option-button.selected');
+                    if (selected) {
+                        // Check boolean answer correctly
+                        const selectedValue = selected.textContent === 'True'; // true if 'True', false if 'False'
+                        const isCorrect = selectedValue === q.answer;
+                        showFeedback(questionDiv, isCorrect, q.answer); // Pass boolean directly
+                    } else {
+                        showFeedback(questionDiv, false, q.answer); // Pass boolean directly
+                    }
+                });
+                questionDiv.appendChild(checkButton);
+
+                tfContainer.appendChild(questionDiv);
+            });
+        }
+
+        // --- Load Multiple Choice Questions ---
+        function loadMultipleChoiceQuestions() {
+            mcContainer.innerHTML = ''; // Clear previous content
+            multipleChoice.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.id = `mc-q-${index}`;
+
+                const questionText = document.createElement('p');
+                questionText.textContent = `${index + 1}. ` + q.question; // Number the questions
+                questionDiv.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+
+                // Shuffle options for variety
+                const shuffledOptions = [...q.options].sort(() => Math.random() - 0.5);
+
+                shuffledOptions.forEach(option => {
+                    const optionButton = document.createElement('button');
+                    optionButton.className = 'option-button';
+                    optionButton.textContent = option;
+                    optionButton.addEventListener('click', () => handleOptionSelection(optionButton, questionDiv));
+                    optionsDiv.appendChild(optionButton);
+                });
+                questionDiv.appendChild(optionsDiv);
+
+                const checkButton = document.createElement('button');
+                checkButton.className = 'check-answer';
+                checkButton.textContent = 'Check Answer';
+                checkButton.addEventListener('click', () => {
+                    const selected = questionDiv.querySelector('.option-button.selected');
+                    if (selected) {
+                        // Trim whitespace from selected and answer for comparison
+                        const isCorrect = selected.textContent.trim() === q.answer.trim();
+                        showFeedback(questionDiv, isCorrect, q.answer);
+                    } else {
+                         showFeedback(questionDiv, false, q.answer);
+                    }
+                });
+                questionDiv.appendChild(checkButton);
+
+                mcContainer.appendChild(questionDiv);
+            });
+        }
+
+        // --- Initial Load ---
+        // Load all dynamic content sections initially so they are ready when tabs are clicked
+         loadEssayQuestions(); // Load essay questions first
+        loadFillInTheBlankQuestions();
+        loadTrueFalseQuestions();
+        loadMultipleChoiceQuestions();
+
+         // Set up accordion listeners for Glossary section (Essay are set up in loadEssayQuestions)
+         setupAccordions(); // This call will add listeners to the Glossary items initially present
+
+
+    }); // End DOMContentLoaded
+    // --- END OF SCRIPT LOGIC ---
+</script>
+</body>
+</html>
