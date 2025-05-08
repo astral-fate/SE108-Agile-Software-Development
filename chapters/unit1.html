@@ -1,4 +1,318 @@
-    <!-- Main Tab Buttons -->
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SE206 - Unit 1: Introduction to Agile Development</title>
+<style>
+/* Paste the CSS from the SE205 unit1.html example here (as requested, maintaining the format) */
+body {
+font-family: Arial, sans-serif;
+background-color: #f8f9fa;
+margin: 0;
+padding: 20px;
+line-height: 1.6;
+color: #333;
+}
+
+.container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 {
+        color: #0056b3; /* Cairo University Blue */
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #dee2e6;
+        padding-bottom: 15px;
+    }
+
+    h2 {
+        margin-top: 20px; /* Reduced top margin for sections */
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e9ecef;
+        padding-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        color: #007bff; /* Lighter Blue */
+    }
+     ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+    ol { /* Added style for ordered lists */
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+     li {
+         margin-bottom: 8px;
+     }
+    code {
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        background-color: #e9ecef;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 0.95em;
+    }
+    strong {
+         color: #dc3545; /* Red emphasis */
+    }
+
+    /* Main Tabs Styles */
+    .main-tabs {
+        display: flex;
+        justify-content: space-around; /* Or flex-start, center */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        margin-bottom: 25px;
+        border-bottom: 2px solid #0056b3;
+    }
+
+    .main-tabs .tab-button {
+        padding: 12px 20px; /* Adjusted padding slightly */
+        border: none;
+        background: none;
+        color: #0056b3;
+        font-size: 0.95em; /* Slightly smaller font */
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px 5px 0 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-bottom: -2px; /* Overlap border */
+        border-bottom: 2px solid transparent;
+        text-align: center;
+    }
+
+    .main-tabs .tab-button.active {
+        background: #0056b3;
+        color: white;
+        border-bottom: 2px solid #0056b3;
+    }
+    .main-tabs .tab-button:hover:not(.active) {
+        background-color: #e9ecef;
+        border-bottom: 2px solid #adb5bd;
+    }
+
+    /* Content Sections */
+    .main-content {
+        display: none; /* Hide all main content sections by default */
+        animation: fadeIn 0.5s;
+    }
+
+    .main-content.active {
+        display: block; /* Show only the active one */
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+
+    /* --- Accordion Styles (for Glossary and Essay) --- */
+    .accordion-container { /* Wrapper for glossary and essay questions */
+         border: 1px solid #dee2e6;
+        border-radius: 5px;
+        overflow: hidden; /* Contain borders */
+    }
+
+
+    .accordion-item {
+        border-bottom: 1px solid #dee2e6; /* Separator */
+    }
+    .accordion-item:last-child {
+        border-bottom: none;
+    }
+
+    .accordion-header {
+        background-color: #f8f9fa;
+        color: #dc3545; /* Highlight Red for terms */
+        cursor: pointer;
+        padding: 15px 20px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 1.1em;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        position: relative; /* For the indicator */
+    }
+
+    /* Specific styling for essay questions header */
+    #essay .accordion-header {
+         color: #0056b3; /* Blue for essay questions */
+    }
+
+
+    .accordion-header:hover {
+        background-color: #e9ecef;
+    }
+
+    /* Indicator (+/-) */
+    .accordion-header::after {
+        content: '\002B'; /* + sign */
+        color: #0056b3;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        transition: transform 0.2s ease-in-out;
+    }
+    #essay .accordion-header::after { /* Ensure blue color for essay indicator */
+         color: #0056b3;
+    }
+
+
+    .accordion-header.active::after {
+        content: "\2212"; /* - sign */
+        transform: rotate(180deg); /* Optional: animate the sign itself */
+    }
+    /* Optional: Slightly different style for active header */
+    .accordion-header.active {
+         background-color: #e7f1ff;
+    }
+
+
+    .accordion-panel {
+        padding: 0 20px; /* Start with 0 padding top/bottom */
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition */
+    }
+    /* Padding when panel is open */
+    .accordion-panel.open { /* Add a class for when it's open */
+         padding: 15px 20px;
+    }
+
+    .accordion-panel p,
+    .accordion-panel ul,
+    .accordion-panel ol { /* Apply margin to lists and paragraphs */
+        margin: 15px 0; /* Add margin back when panel is open */
+        color: #333; /* Reset color for definition */
+    }
+     .accordion-panel strong { /* Ensure strong is red inside panel */
+         color: #dc3545;
+     }
+
+
+    /* --- End Accordion Styles --- */
+
+    /* Concepts Section Styles */
+    #concepts .concept-block {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 25px;
+    }
+     #concepts .concept-block h3 {
+        margin-top: 0;
+        color: #007bff;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+    }
+
+    /* Quiz Styles (apply within #fill, #tf, #mc) */
+    .question {
+        margin-bottom: 25px;
+        padding: 20px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        background-color: #ffffff; /* White background for questions */
+        position: relative; /* For feedback positioning */
+    }
+
+    .question p {
+        margin: 0 0 15px;
+        font-weight: bold;
+        font-size: 1.05em;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .option-button {
+        padding: 10px 15px;
+        border: 1px solid #ced4da;
+        background: #f8f9fa; /* Light background for options */
+        color: #495057;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: left;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+        width: 100%;
+    }
+    .option-button:hover {
+         background-color: #e9ecef;
+         border-color: #adb5bd;
+    }
+
+    .option-button.selected {
+        background: #007bff;
+        color: white;
+        border-color: #0056b3;
+    }
+
+    .check-answer {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        background: #28a745; /* Success Green */
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+    }
+    .check-answer:hover {
+         background-color: #218838;
+    }
+
+    .feedback {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .feedback.correct {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .feedback.incorrect {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+</style>
+
+</head>
+<body>
+<div class="container">
+<h1>SE206 - Unit 1: Introduction to Agile Development</h1>
+
+<!-- Main Tab Buttons -->
     <div class="main-tabs">
         <button class="tab-button active" data-tab="glossary">Glossary</button>
         <button class="tab-button" data-tab="concepts">Key Concepts</button>
@@ -745,5 +1059,9 @@
     }); // End DOMContentLoaded
     // --- END OF SCRIPT LOGIC ---
 </script>
+
+
+    
 </body>
 </html>
+
